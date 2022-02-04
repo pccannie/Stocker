@@ -432,7 +432,7 @@ class Stocker():
         
         if days > 0:
             for QAQ in range(-days,-1):
-                print('Predicted Price on {} = ${:.2f}'.format(
+                print('Predicted Price on {} = ${:.2f}\n'.format(
                 future.ix[len(future) +QAQ, 'ds'], future.ix[len(future)+QAQ, 'yhat']))
             
 
