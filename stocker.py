@@ -431,10 +431,9 @@ class Stocker():
         future = model.predict(future)
         
         if days > 0:
-            # Print the predicted price
-            for QAQ in range(-days,-1):
-                print('Predicted Price on {} = ${:.2f}'.format(
-                future.ix[QAQ, 'ds'], future.ix[QAQ, 'yhat']))
+            print('Predicted Price on {} = ${:.2f}'.format(
+                future.ix[len(future) - 5, 'ds'], future.ix[len(future) - 5, 'yhat']))
+            
 
             title = '%s Historical and Predicted Stock Price'  % self.symbol
         else:
